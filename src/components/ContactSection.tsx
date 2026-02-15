@@ -1,90 +1,47 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-  };
-
   return (
-    <section id="contact" className="section-padding relative">
+    <section id="contact" className="py-24 px-6 relative">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-gradient-primary opacity-[0.04] blur-[120px]" />
 
-      <div className="max-w-3xl mx-auto relative z-10" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          className="text-center mb-12"
+      <div className="max-w-3xl mx-auto text-center relative z-10">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl md:text-5xl font-heading font-bold text-gradient mb-6"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-gradient mb-4">
-            Let's Scale Your Brand
-          </h2>
-          <p className="text-muted-foreground font-body text-lg">
-            Ready to turn ad spend into revenue? Let's talk.
-          </p>
-        </motion.div>
+          Let's Grow Your Brand Together
+        </motion.h2>
 
-        <motion.form
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.2 }}
-          className="bg-glass rounded-2xl p-8 md:p-12 space-y-6"
-          onSubmit={(e) => e.preventDefault()}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 text-muted-foreground"
         >
-          <div>
-            <label className="text-sm font-heading text-muted-foreground mb-2 block">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formState.name}
-              onChange={handleChange}
-              className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-foreground font-body
-                         focus:outline-none focus:border-primary/60 focus:shadow-[0_0_20px_hsl(var(--glow-orange))]
-                         transition-all duration-300 placeholder:text-muted-foreground/50"
-              placeholder="Your name"
-            />
-          </div>
-          <div>
-            <label className="text-sm font-heading text-muted-foreground mb-2 block">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formState.email}
-              onChange={handleChange}
-              className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-foreground font-body
-                         focus:outline-none focus:border-primary/60 focus:shadow-[0_0_20px_hsl(var(--glow-orange))]
-                         transition-all duration-300 placeholder:text-muted-foreground/50"
-              placeholder="you@brand.com"
-            />
-          </div>
-          <div>
-            <label className="text-sm font-heading text-muted-foreground mb-2 block">Message</label>
-            <textarea
-              name="message"
-              value={formState.message}
-              onChange={handleChange}
-              rows={5}
-              className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-foreground font-body
-                         focus:outline-none focus:border-primary/60 focus:shadow-[0_0_20px_hsl(var(--glow-orange))]
-                         transition-all duration-300 placeholder:text-muted-foreground/50 resize-none"
-              placeholder="Tell me about your project..."
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full py-4 rounded-lg bg-gradient-primary text-primary-foreground font-heading font-semibold text-lg
-                       hover:opacity-90 transition-opacity tracking-wide"
+          <a
+            href="mailto:sdevsolanki352@gmail.com"
+            className="flex items-center gap-2 hover:text-primary transition-colors font-body"
           >
-            Send Message
-          </button>
-        </motion.form>
+            <Mail size={18} />
+            sdevsolanki352@gmail.com
+          </a>
+          <a
+            href="tel:+918469837265"
+            className="flex items-center gap-2 hover:text-primary transition-colors font-body"
+          >
+            <Phone size={18} />
+            +91 84698 37265
+          </a>
+        </motion.div>
       </div>
     </section>
   );
