@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"G:\\\\Websites\\\\DarshanWebsite\\\\orange-glow-labs\\\\src\\\\components\\\\ui\")",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
