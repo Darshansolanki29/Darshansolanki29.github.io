@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(dir \"G:\\\\Websites\\\\DarshanWebsite\\\\orange-glow-labs\\\\src\\\\components\\\\ui\")",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate favicon and page title\n\n- Replaced Lovable favicon with custom icons \\(all sizes\\)\n- Added favicon link tags in index.html\n- Updated title to Performance Marketing\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   }
 }

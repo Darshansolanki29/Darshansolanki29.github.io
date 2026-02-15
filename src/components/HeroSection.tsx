@@ -26,7 +26,7 @@ const HeroSection = () => {
               transition={{ delay: 0.2 }}
               className="text-muted-foreground text-sm uppercase tracking-[0.3em] mb-4 font-body"
             >
-              Performance Marketing Architect
+              Performance Marketing
             </motion.p>
 
             <motion.h1
