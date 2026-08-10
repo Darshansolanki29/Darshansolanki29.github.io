@@ -17,6 +17,18 @@ a:hover{color:#FF1E00}
 @media (max-width: 767px){[data-ds-desknav]{display:none !important}[data-ds-burger]{display:flex !important}[data-ds-sticky-rail]{position:static !important}}
 @media (min-width: 768px){[data-ds-mobilemenu]{display:none !important}}
 [hidden]{display:none !important}
+
+/* The loader is a full-screen opaque panel that only app.js removes. It stays
+   hidden until the inline head script proves scripting works, so a blocked or
+   failed script cannot leave the page as a black rectangle. */
+#ds-loader{display:none;position:fixed;inset:0;z-index:200;background:#111111;color:#FAF9F6;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.js #ds-loader{display:flex}
+
+/* The portrait slots carry real <img> tags so they render without JS. When the
+   flight is running the fixed #fly card draws the portrait instead, so the
+   in-slot copies step aside without collapsing the layout they anchor. */
+.ds-fly #hero-slot img,.ds-fly #about-slot img{visibility:hidden}
+
 #burger{-webkit-tap-highlight-color:transparent}
 #burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 #burger[aria-expanded="true"] span:nth-child(2){opacity:0}
@@ -41,4 +53,14 @@ body.ds-scroll-lock{overflow:hidden}
   [data-exp-row],[data-svc-row]{grid-template-columns:1fr !important;gap:10px !important}
   #contact a span{overflow-wrap:anywhere}
   [data-span-2]{grid-column:auto}
+}
+
+/* The featured card's media column drops its left padding so it butts against
+   the copy beside it. At 966px and under that row wraps, leaving nothing to butt
+   against and the media sitting hard on the card's left border. Restore the
+   padding and centre the column for the whole wrapped range. The cutoff sits
+   just under the measured wrap point: erring low keeps the side-by-side gap
+   exact, and the worst case is one narrow band during the webfont swap. */
+@media (max-width: 966px){
+  [data-media-col]{padding-left:clamp(20px,2.5vw,32px) !important;margin-inline:auto}
 }

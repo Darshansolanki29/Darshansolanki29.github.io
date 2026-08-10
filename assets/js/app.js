@@ -75,6 +75,17 @@
     }
   }
 
+  /* ------------------------------------------------------- looping video */
+  // Autoplay is declared in the HTML so the clip still runs without scripting.
+  // Under reduced motion we stop it and let the poster stand in.
+  if (reduced) {
+    $$('video[autoplay]').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.removeAttribute('loop');
+      v.pause();
+    });
+  }
+
   /* ----------------------------------------------------- portrait flight */
   // Hero slot -> grows and flips at the centre of the viewport -> flips back
   // and docks into the About slot, swapping to the red portrait mid-flip.
@@ -83,14 +94,19 @@
   var canFly = !reduced && window.matchMedia('(min-width: 768px)').matches;
 
   if (canFly && fly && flyCard && flyImg && heroSlot && aboutSlot) {
-    var PORTRAIT_FRONT = 'assets/img/portrait-bw.jpg';
-    var PORTRAIT_BACK = 'assets/img/portrait-red.jpg';
+    var PORTRAIT_FRONT = 'assets/img/portrait-bw.webp';
+    var PORTRAIT_BACK = 'assets/img/portrait-red.webp';
     var clamp01 = function (v) { return Math.max(0, Math.min(1, v)); };
     var ease = function (t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; };
     var lerp = function (a, b, t) { return a + (b - a) * t; };
 
-    var tick = function () {
-      requestAnimationFrame(tick);
+    // The in-slot portraits give way to the flying card only once we know the
+    // flight is actually running.
+    document.documentElement.classList.add('ds-fly');
+
+    var frame = 0;
+    var update = function () {
+      frame = 0;
       var vh = window.innerHeight, vw = window.innerWidth;
       var hero = heroSlot.getBoundingClientRect();
       var about = aboutSlot.getBoundingClientRect();
@@ -121,22 +137,21 @@
 
       fly.style.visibility = 'visible';
     };
-    tick();
-  } else {
-    // No flight (touch, narrow, or reduced motion): fill both slots statically so
-    // they are not left as empty boxes.
-    if (fly) fly.parentNode.removeChild(fly);
-    var placePortrait = function (slot, src, eager) {
-      if (!slot || slot.firstElementChild) return;
-      var img = new Image();
-      img.src = src;
-      img.alt = 'Darshan Solanki';
-      if (!eager) img.loading = 'lazy';
-      img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:center top;display:block';
-      slot.appendChild(img);
-    };
-    placePortrait(heroSlot, 'assets/img/portrait-bw.jpg', true);
-    placePortrait(aboutSlot, 'assets/img/portrait-red.jpg', false);
+
+    // Only recompute while the page is actually moving. A free-running rAF loop
+    // would force layout twice a frame forever, long past both slots.
+    var schedule = function () { if (!frame) frame = requestAnimationFrame(update); };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    // Late-arriving webfonts and images reflow the hero, moving the slot the
+    // card is anchored to, so re-measure once everything has settled.
+    window.addEventListener('load', schedule);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+    update();
+  } else if (fly) {
+    // No flight (touch, narrow, or reduced motion): the slots keep the static
+    // portraits that ship in the HTML, so only the flying card goes.
+    fly.parentNode.removeChild(fly);
   }
 
   /* ------------------------------------------------------ testimonial deck */
