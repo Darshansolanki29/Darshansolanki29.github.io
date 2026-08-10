@@ -1,25 +1,479 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Darshan Solanki — Performance Marketing</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="description" content="I help brands scale profitably with data-driven ads & growth systems." />
-    <meta name="author" content="Darshan Solanki" />
-    <meta property="og:title" content="Darshan Solanki — Performance Marketing" />
-    <meta property="og:description" content="Data-driven ads & growth systems. 9x ROAS." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Darshan Solanki - performance marketing specialist in Ahmedabad, India. Meta Ads, Google Ads, e-commerce growth and marketplace operations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;display=swap" rel="stylesheet">
+  <title>Darshan Solanki — Performance Marketing Specialist</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <div id="ds-loader" style="position:fixed;inset:0;z-index:200;background:#111111;color:#FAF9F6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px">
+    <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,3.4vw,38px);letter-spacing:-0.02em;overflow:hidden"><span style="display:inline-block;animation:dsRise .6s cubic-bezier(.22,.61,.36,1) both">Darshan Solanki</span></div>
+    <div style="width:min(240px,50vw);height:1px;background:rgba(250,249,246,.2);position:relative"><div style="position:absolute;left:0;top:0;height:100%;background:#FF1E00;animation:dsLoadBar 1.1s cubic-bezier(.65,0,.35,1) both"></div></div>
+    <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.18em;color:rgba(250,249,246,.5)">PERFORMANCE MARKETING — PORTFOLIO</div>
+  </div>
+
+  <div id="fly" aria-hidden="true" style="position:fixed;left:0;top:0;width:180px;height:240px;z-index:60;perspective:1400px;pointer-events:none;visibility:hidden">
+    <div id="fly-card" style="position:relative;width:100%;height:100%;transform-style:preserve-3d;will-change:transform">
+      <div style="position:absolute;inset:0;backface-visibility:hidden;border-radius:10px;overflow:hidden;border:1px solid rgba(17,17,17,.14);box-shadow:0 24px 60px -30px rgba(17,17,17,.35)">
+        <img id="fly-img" src="assets/img/portrait-bw.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+      </div>
+      <div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateY(180deg);border-radius:10px;overflow:hidden;background:#111111;color:#FAF9F6;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:9%;box-shadow:0 24px 60px -30px rgba(17,17,17,.35)">
+        <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;color:#FF6A52">PROFILE</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;line-height:1.05">Darshan Solanki</div>
+        <div style="font-size:13px;line-height:1.6;color:rgba(250,249,246,.75)">Performance Marketing Specialist<br>Ahmedabad, India</div>
+        <div style="display:flex;gap:22px;margin-top:4px">
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">2<span style="color:#FF1E00">+</span></div><div style="font-family:'Geist Mono',monospace;font-size:8px;letter-spacing:.12em;color:rgba(250,249,246,.55);margin-top:4px">YEARS</div></div>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">30<span style="color:#FF1E00">+</span></div><div style="font-family:'Geist Mono',monospace;font-size:8px;letter-spacing:.12em;color:rgba(250,249,246,.55);margin-top:4px">AD ACCOUNTS</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:fixed;top:0;left:0;right:0;height:2px;z-index:150;background:transparent"><div id="progress-bar" style="height:100%;width:0%;background:#FF1E00"></div></div>
+
+  <header style="position:sticky;top:0;z-index:100;background:rgba(250,249,246,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(17,17,17,.08)">
+    <div style="max-width:1360px;margin:0 auto;padding:16px clamp(20px,4.5vw,64px);display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <a href="#top" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:16px;letter-spacing:-0.01em">Darshan Solanki</a>
+      <nav data-ds-desknav="" aria-label="Primary" style="display:flex;gap:clamp(14px,2.4vw,32px);font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;flex-wrap:wrap">
+        <a href="#work" style="color:#444444;padding:12px 4px;display:inline-block" data-hov="0">WORK</a>
+        <a href="#about" style="color:#444444;padding:12px 4px;display:inline-block" data-hov="0">ABOUT</a>
+        <a href="#expertise" style="color:#444444;padding:12px 4px;display:inline-block" data-hov="0">EXPERTISE</a>
+        <a href="#experience" style="color:#444444;padding:12px 4px;display:inline-block" data-hov="0">EXPERIENCE</a>
+        <a href="#contact" style="color:#444444;padding:12px 4px;display:inline-block" data-hov="0">CONTACT</a>
+      </nav>
+      <button id="burger" data-ds-burger="" aria-label="Open menu" aria-expanded="false" data-act="menuToggle" style="display:none;flex-direction:column;justify-content:center;gap:5px;width:48px;height:48px;margin:-8px -8px -8px 0;border:none;background:transparent;cursor:pointer;align-items:center">
+        <span style="display:block;width:22px;height:2px;background:#111111;transition:transform .3s;transform:none"></span>
+        <span style="display:block;width:22px;height:2px;background:#111111;transition:transform .3s,opacity .3s;opacity:1"></span>
+        <span style="display:block;width:22px;height:2px;background:#111111;transition:transform .3s;transform:none"></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" hidden data-ds-mobilemenu="" style="position:fixed;inset:0;z-index:99;background:#FAF9F6;display:flex;flex-direction:column;justify-content:center;padding:80px clamp(20px,6vw,40px) 40px">
+    <nav aria-label="Mobile" style="display:flex;flex-direction:column">
+      <a href="#work" data-act="menuClose" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(32px,9vw,44px);letter-spacing:-0.02em;padding:14px 0;border-bottom:1px solid rgba(17,17,17,.1);display:flex;justify-content:space-between;align-items:baseline"><span>Work</span><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">01</span></a>
+      <a href="#about" data-act="menuClose" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(32px,9vw,44px);letter-spacing:-0.02em;padding:14px 0;border-bottom:1px solid rgba(17,17,17,.1);display:flex;justify-content:space-between;align-items:baseline"><span>About</span><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">02</span></a>
+      <a href="#expertise" data-act="menuClose" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(32px,9vw,44px);letter-spacing:-0.02em;padding:14px 0;border-bottom:1px solid rgba(17,17,17,.1);display:flex;justify-content:space-between;align-items:baseline"><span>Expertise</span><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">03</span></a>
+      <a href="#experience" data-act="menuClose" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(32px,9vw,44px);letter-spacing:-0.02em;padding:14px 0;border-bottom:1px solid rgba(17,17,17,.1);display:flex;justify-content:space-between;align-items:baseline"><span>Experience</span><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">04</span></a>
+      <a href="#contact" data-act="menuClose" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(32px,9vw,44px);letter-spacing:-0.02em;padding:14px 0;display:flex;justify-content:space-between;align-items:baseline"><span>Contact</span><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">05</span></a>
+    </nav>
+    <div style="margin-top:32px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#444444">PERFORMANCE MARKETING SPECIALIST — AHMEDABAD</div>
+  </div>
+
+  <main id="top">
+
+  <section style="min-height:calc(100svh - 58px);max-width:1360px;margin:0 auto;padding:clamp(36px,6vh,72px) clamp(20px,4.5vw,64px) clamp(28px,5vh,52px);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative">
+    <div style="display:flex;gap:12px 28px;justify-content:center;flex-wrap:wrap;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#444444;animation:dsRise .7s .2s cubic-bezier(.22,.61,.36,1) both">
+      <span style="color:#FF1E00">©2026 — PORTFOLIO</span>
+      <span>PERFORMANCE MARKETING SPECIALIST</span>
+      <span>AHMEDABAD, INDIA</span>
+    </div>
+    <h1 style="margin:clamp(20px,4vh,40px) 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(52px,11.5vw,164px);line-height:.94;letter-spacing:-0.035em;text-transform:uppercase">
+      <span style="display:block;overflow:hidden"><span style="display:block;animation:dsRise .8s .45s cubic-bezier(.22,.61,.36,1) both">Darshan</span></span>
+      <span style="display:block;overflow:hidden"><span style="display:block;animation:dsRise .8s .6s cubic-bezier(.22,.61,.36,1) both">Solanki<span style="color:#FF1E00">.</span></span></span>
+    </h1>
+    <p style="margin:clamp(18px,3.2vh,32px) 0 0;font-size:clamp(16px,1.8vw,21px);line-height:1.5;color:#444444;max-width:44ch;text-wrap:pretty;animation:dsRise .8s .8s cubic-bezier(.22,.61,.36,1) both">Performance marketer specialising in Meta&nbsp;Ads, Google&nbsp;Ads, e-commerce growth and AI-powered marketing solutions.</p>
+    <div style="display:flex;gap:2px 20px;justify-content:center;margin-top:clamp(10px,2vh,20px);flex-wrap:wrap;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.06em;animation:dsRise .8s .95s cubic-bezier(.22,.61,.36,1) both">
+      <a href="mailto:sdevsolanki352@gmail.com" style="display:inline-block;padding:12px 2px"><span style="border-bottom:1px solid rgba(17,17,17,.25);padding-bottom:2px">sdevsolanki352@gmail.com</span></a>
+      <a href="tel:+918469837265" style="display:inline-block;padding:12px 2px"><span style="border-bottom:1px solid rgba(17,17,17,.25);padding-bottom:2px">+91 84698 37265</span></a>
+      <a href="https://www.linkedin.com/in/darshan-solanki-98a4a7301" target="_blank" rel="noopener" style="display:inline-block;padding:12px 2px"><span style="border-bottom:1px solid rgba(17,17,17,.25);padding-bottom:2px">LinkedIn ↗</span></a>
+
+    </div>
+    <div id="hero-slot" style="margin-top:clamp(24px,4.5vh,44px);width:clamp(140px,14vw,190px);aspect-ratio:3/4;border-radius:10px;overflow:hidden;border:1px solid rgba(17,17,17,.12);animation:dsRise .9s 1.1s cubic-bezier(.22,.61,.36,1) both">
+
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:clamp(24px,4vh,40px);animation:dsRise .7s 1.3s cubic-bezier(.22,.61,.36,1) both">
+      <div style="width:22px;height:36px;border:1px solid rgba(17,17,17,.3);border-radius:11px;display:flex;justify-content:center;padding-top:6px"><div style="width:3px;height:8px;border-radius:2px;background:#FF1E00;animation:dsScrollDot 1.8s ease-in-out infinite"></div></div>
+      <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;color:#444444">SCROLL — THE PORTRAIT FOLLOWS YOU INTO THE STORY</span>
+    </div>
+  </section>
+
+  <section id="about" style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vh,56px)" data-reveal="">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">01</span>
+      <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">About</h2>
+      <div style="flex:1;height:1px;background:rgba(17,17,17,.12);align-self:center"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(28px,4vw,72px)">
+      <div data-reveal="">
+        <p style="margin:0;font-size:clamp(19px,2.1vw,26px);line-height:1.55;letter-spacing:-0.01em;text-wrap:pretty">I build and optimise paid campaigns where every decision is tied to a number — cost per lead, click quality, funnel movement. Over two years I've managed 30+ ad accounts across Meta and Google, generating verified lead volume for real-estate developers and running marketplace operations for e-commerce brands.</p>
+        <p style="margin:22px 0 0;font-size:16px;line-height:1.7;color:#444444;max-width:58ch;text-wrap:pretty">My work spans the full loop: audience research, creative strategy, tracking setup, campaign structure, daily optimisation and honest reporting. On the e-commerce side, I handle catalogue creation and listing optimisation across Amazon, Flipkart, Meesho and Shopify — from SEO product titles to compliance fixes.</p>
+        <div style="display:flex;gap:clamp(32px,5vw,72px);margin-top:38px;flex-wrap:wrap">
+          <div>
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(52px,6.5vw,92px);line-height:.9;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">2<span style="color:#FF1E00">+</span></div>
+            <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#444444;margin-top:10px">YEARS IN PERFORMANCE MARKETING</div>
+          </div>
+          <div>
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(52px,6.5vw,92px);line-height:.9;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">30<span style="color:#FF1E00">+</span></div>
+            <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#444444;margin-top:10px">ADVERTISING ACCOUNTS MANAGED</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:1px;background:rgba(17,17,17,.1);border:1px solid rgba(17,17,17,.1);margin-top:36px;border-radius:6px;overflow:hidden">
+          <div style="background:#FAF9F6;padding:16px 18px"><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444">BASED IN</div><div style="font-size:15px;margin-top:6px">Ahmedabad, India</div></div>
+          <div style="background:#FAF9F6;padding:16px 18px"><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444">FOCUS</div><div style="font-size:15px;margin-top:6px">Paid acquisition + e-commerce</div></div>
+          <div style="background:#FAF9F6;padding:16px 18px"><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444">INDUSTRIES</div><div style="font-size:15px;margin-top:6px">5 sectors, 30+ accounts</div></div>
+
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div id="about-slot" style="width:min(380px,100%);aspect-ratio:3/4;border-radius:10px;overflow:hidden;border:1px solid rgba(17,17,17,.1);position:relative">
+
+
+        </div>
+        <div data-reveal="">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#444444;margin-bottom:14px">PRINCIPLES</div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;gap:16px;padding:13px 0;border-top:1px solid rgba(17,17,17,.1);align-items:baseline"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">P.1</span><span style="font-size:15px;line-height:1.5">Decisions come from the data, not the dashboard aesthetic.</span></div>
+            <div style="display:flex;gap:16px;padding:13px 0;border-top:1px solid rgba(17,17,17,.1);align-items:baseline"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">P.2</span><span style="font-size:15px;line-height:1.5">Test in parallel, kill weak campaigns early, scale what earns it.</span></div>
+            <div style="display:flex;gap:16px;padding:13px 0;border-top:1px solid rgba(17,17,17,.1);align-items:baseline"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">P.3</span><span style="font-size:15px;line-height:1.5">Report only what the platform can prove.</span></div>
+            <div style="display:flex;gap:16px;padding:13px 0;border-top:1px solid rgba(17,17,17,.1);border-bottom:1px solid rgba(17,17,17,.1);align-items:baseline"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#FF1E00">P.4</span><span style="font-size:15px;line-height:1.5">A clean tracking setup is worth more than a clever ad.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div data-ds-marquee="" aria-hidden="true" style="border-top:1px solid rgba(17,17,17,.08);border-bottom:1px solid rgba(17,17,17,.08);padding:14px 0;white-space:nowrap;overflow:hidden">
+    <div style="display:inline-flex;gap:44px;animation:dsMarquee 36s linear infinite;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.18em;color:#444444;padding-right:44px">
+      <span>META ADS</span><span style="color:#FF1E00">●</span><span>GOOGLE ADS</span><span style="color:#FF1E00">●</span><span>LEAD GENERATION</span><span style="color:#FF1E00">●</span><span>CAMPAIGN OPTIMISATION</span><span style="color:#FF1E00">●</span><span>E-COMMERCE MARKETPLACES</span><span style="color:#FF1E00">●</span><span>CATALOGUE MANAGEMENT</span><span style="color:#FF1E00">●</span><span>REAL ESTATE CAMPAIGNS</span><span style="color:#FF1E00">●</span><span>META ADS</span><span style="color:#FF1E00">●</span><span>GOOGLE ADS</span><span style="color:#FF1E00">●</span><span>LEAD GENERATION</span><span style="color:#FF1E00">●</span><span>CAMPAIGN OPTIMISATION</span><span style="color:#FF1E00">●</span><span>E-COMMERCE MARKETPLACES</span><span style="color:#FF1E00">●</span><span>CATALOGUE MANAGEMENT</span><span style="color:#FF1E00">●</span><span>REAL ESTATE CAMPAIGNS</span><span style="color:#FF1E00">●</span>
+    </div>
+  </div>
+
+  <section id="experience" style="background:#111111;color:#FAF9F6">
+    <div style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vh,56px)" data-reveal="">
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">02</span>
+        <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Experience</h2>
+        <div style="flex:1;height:1px;background:rgba(250,249,246,.18);align-self:center"></div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div data-exp-row style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:clamp(16px,3vw,48px);padding:clamp(24px,4vh,40px) 0;border-top:1px solid rgba(250,249,246,.15)" data-reveal="">
+          <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:rgba(250,249,246,.55)">01 January 2025 - Present</div>
+          <div>
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(22px,2.6vw,32px);letter-spacing:-0.01em">Performance Marketing Specialist</h3>
+            <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#FF6A52;margin-top:8px">Freelancing</div>
+            <ul style="margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:10px 32px;font-size:15px;line-height:1.55;color:rgba(250,249,246,.8)">
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>Managed 30+ Meta &amp; Google Ads accounts end-to-end</li>
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>Lead generation and conversion optimisation for real-estate developers</li>
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>Audience research, campaign analysis and scaling decisions</li>
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>Conversion tracking via Google Analytics &amp; Tag Manager</li>
+            </ul>
+          </div>
+        </div>
+        <div data-exp-row style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:clamp(16px,3vw,48px);padding:clamp(24px,4vh,40px) 0;border-top:1px solid rgba(250,249,246,.15);border-bottom:1px solid rgba(250,249,246,.15)" data-reveal="">
+          <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:rgba(250,249,246,.55)">10 January 2026 - June 2026</div>
+          <div>
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(22px,2.6vw,32px);letter-spacing:-0.01em">E-commerce &amp; Marketplace Operations</h3>
+            <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#FF6A52;margin-top:8px">Freelancing</div>
+            <ul style="margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:10px 32px;font-size:15px;line-height:1.55;color:rgba(250,249,246,.8)">
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>Amazon &amp; Flipkart catalogue creation and migration</li>
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>SEO product titles, descriptions and listing-compliance fixes</li>
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>Marketplace optimisation and search-keyword analysis</li>
+              <li style="display:flex;gap:10px"><span style="color:#FF1E00">—</span>Pricing, SKU and inventory management</li>
+            </ul>
+          </div>
+        </div><div data-exp-row style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:clamp(16px,3vw,48px);padding:clamp(24px,4vh,40px) 0;border-top:1px solid rgba(250,249,246,.15);border-bottom:1px solid rgba(250,249,246,.15)" data-reveal="">
+          <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:rgba(250,249,246,.55)">01 December 2024 - 31 December 2025</div>
+          <div>
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(22px,2.6vw,32px);letter-spacing:-0.01em">Digital Marketing Manager</h3>
+            <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#FF6A52;margin-top:8px">Marketing Manager at EES Ventures</div>
+            <ul style="margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:10px 32px;font-size:15px;line-height:1.55;color:rgba(250,249,246,.8)">
+              <li style="display:flex;gap:10px"><span style="color: rgb(255, 30, 0);">—</span>Data-driven campaigns across social, email &amp; paid ads</li>
+              <li style="display:flex;gap:10px"><span style="color: rgb(255, 30, 0);">—</span>Social media optimisation driving 60% reach growth</li>
+              <li style="display:flex;gap:10px"><span style="color: rgb(255, 30, 0);">—</span>KPI monitoring achieving 30% ROI increase</li>
+              <li style="display:flex;gap:10px"><span style="color: rgb(255, 30, 0);">—</span>Online reputation management boosting satisfaction by 20%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:32px;flex-wrap:wrap" data-reveal="">
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.6);border:1px solid rgba(250,249,246,.2);border-radius:999px;padding:5px 12px">REAL ESTATE</span>
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.6);border:1px solid rgba(250,249,246,.2);border-radius:999px;padding:5px 12px">E-COMMERCE</span>
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.6);border:1px solid rgba(250,249,246,.2);border-radius:999px;padding:5px 12px">INDUSTRIAL MANUFACTURING</span>
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.6);border:1px solid rgba(250,249,246,.2);border-radius:999px;padding:5px 12px">SOLAR ENERGY</span>
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.6);border:1px solid rgba(250,249,246,.2);border-radius:999px;padding:5px 12px">SERVICE BUSINESSES</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vh,56px)" data-reveal="">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">03</span>
+      <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Expertise</h2>
+      <div style="flex:1;height:1px;background:rgba(17,17,17,.12);align-self:center"></div>
+    </div>
+    <div style="display:flex;gap:clamp(24px,5vw,88px);align-items:flex-start;flex-wrap:wrap">
+      <div data-ds-sticky-rail="" style="flex:0 1 300px;min-width:min(240px,100%);position:sticky;top:96px">
+        <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#444444">NOW VIEWING</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(56px,7vw,96px);line-height:1;letter-spacing:-0.03em;color:#FF1E00;font-variant-numeric:tabular-nums;margin-top:10px"><span id="cat-num">01</span></div>
+        <div style="font-size:clamp(18px,1.8vw,22px);letter-spacing:-0.01em;margin-top:8px;min-height:2.6em"><span id="cat-name">Performance Marketing</span></div>
+        <div style="width:120px;height:2px;background:rgba(17,17,17,.12);margin-top:18px;position:relative;border-radius:1px"><div id="cat-progress" style="position:absolute;left:0;top:0;height:100%;background:#FF1E00;border-radius:1px;transition:width .5s cubic-bezier(.22,.61,.36,1);width:25%"></div></div>
+        <p style="margin:22px 0 0;font-size:14px;line-height:1.6;color:#444444;max-width:30ch">Four disciplines, one operating system: measure, test, optimise, scale.</p>
+      </div>
+      <div style="flex:1 1 480px;min-width:min(280px,100%);display:flex;flex-direction:column;gap:clamp(28px,4vh,44px)">
+        <div data-cat="0" data-reveal="" style="border-top:1px solid rgba(17,17,17,.12);padding-top:24px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap"><h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(20px,2.4vw,28px);letter-spacing:-0.01em">Performance Marketing</h3><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">01 / 04</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:16px;font-size:15px;line-height:1.6;color:#444444"><span>Meta Ads</span><span>Google Ads</span><span>Google Analytics</span><span>Google Tag Manager</span><span>Conversion Tracking</span><span>Pixel Setup</span><span>Remarketing</span><span>Audience Research</span><span>Funnel Optimisation</span><span>Campaign Scaling</span></div>
+        </div>
+        <div data-cat="1" data-reveal="" style="border-top:1px solid rgba(17,17,17,.12);padding-top:24px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap"><h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(20px,2.4vw,28px);letter-spacing:-0.01em">E-commerce</h3><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">02 / 04</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:16px;font-size:15px;line-height:1.6;color:#444444"><span>Product Listing</span><span>SEO Product Titles</span><span>Product Descriptions</span><span>Marketplace Optimisation</span><span>Flipkart</span><span>Amazon</span><span>Meesho</span><span>Shopify</span><span>Campaign Management</span><span>AI Product Images</span><span>Catalogue Management</span></div>
+        </div>
+        <div data-cat="2" data-reveal="" style="border-top:1px solid rgba(17,17,17,.12);padding-top:24px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap"><h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(20px,2.4vw,28px);letter-spacing:-0.01em">Marketing</h3><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">03 / 04</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:16px;font-size:15px;line-height:1.6;color:#444444"><span>Brand Strategy</span><span>Social Media Marketing</span><span>Content Marketing</span><span>Lead Generation</span><span>Landing Page Optimisation</span><span>Conversion Rate Optimisation</span></div>
+        </div>
+        <div data-cat="3" data-reveal="" style="border-top:1px solid rgba(17,17,17,.12);padding-top:24px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap"><h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(20px,2.4vw,28px);letter-spacing:-0.01em">Tools</h3><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">04 / 04</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:16px;font-size:15px;line-height:1.6;color:#444444"><span>Canva</span><span>Photoshop</span><span>Illustrator</span><span>Figma</span><span>ChatGPT</span><span>AI Tools</span><span>Google Merchant Center</span><span>Meta Business Suite</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(40px,6vh,72px)" data-reveal="">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">04</span>
+      <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Selected work</h2>
+      <div style="flex:1;height:1px;background:rgba(17,17,17,.12);align-self:center"></div>
+      <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444">7 PROJECTS</span>
+    </div>
+
+    <a href="case-study-radhe-hill.html" data-reveal="" style="display:block;border:1px solid rgba(17,17,17,.12);border-radius:8px;overflow:hidden;transition:border-color .3s" data-hov="1">
+      <div style="display:flex;flex-wrap:wrap;align-items:stretch">
+        <div style="flex:1 1 420px;min-width:0;padding:clamp(28px,4vw,52px)">
+          <div style="display:flex;gap:14px;align-items:baseline;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;flex-wrap:wrap"><span style="color:#FF1E00">W.01 — FEATURED</span><span>REAL ESTATE</span><span>META ADS</span><span>16 FEB – 17 MAR 2026</span></div>
+          <h3 style="margin:20px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(28px,4vw,48px);letter-spacing:-0.02em;line-height:1.05">Perfect Home / Radhe Hill</h3>
+          <p style="margin:16px 0 0;font-size:16px;line-height:1.6;color:#444444;max-width:48ch;text-wrap:pretty">High-volume real-estate lead generation with campaign-level optimisation — four parallel campaigns, spend routed to the strongest CPLs.</p>
+          <div style="display:flex;gap:clamp(24px,3.5vw,56px);margin-top:30px;flex-wrap:wrap">
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(42px,5.2vw,72px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">654</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;margin-top:8px">LEADS · 16 FEB–17 MAR 2026</div></div>
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(42px,5.2vw,72px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">₹19.80</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;margin-top:8px">AVG. COST PER LEAD</div></div>
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(42px,5.2vw,72px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">933K</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;margin-top:8px">IMPRESSIONS (933,095)</div></div>
+          </div>
+        </div>
+        <div style="flex:0 1 380px;min-width:min(260px,100%);align-self:stretch;display:flex;padding:clamp(20px,2.5vw,32px);padding-left:0;box-sizing:border-box">
+          <div style="flex:1;min-height:clamp(240px,32vw,420px);border-radius:6px;overflow:hidden;background:#F1EFEA">
+            <img src="assets/img/radhe-hill.webp" alt="Radhe Hill — lobby and stairwell walkthrough" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(20px,2.5vw,32px);margin-top:clamp(20px,2.5vw,32px)">
+      <div data-reveal="" style="border:1px solid rgba(17,17,17,.12);border-radius:8px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px;transition:border-color .3s" data-hov="1">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;flex-wrap:wrap"><span>W.02 · REAL ESTATE · META ADS</span><span>1 MAR – 10 JUN 2026</span></div>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em">Pushkar Gold</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#444444;text-wrap:pretty">Lead generation at scale — one dominant campaign carried 1,080 of 1,098 total leads at ₹34.12 CPL.</p>
+        <div style="margin-top:auto;display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(17,17,17,.1);padding-top:18px">
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">1,098</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">LEADS</div></div>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">₹35.61</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">AVG. CPL</div></div>
+        </div>
+      </div>
+      <div data-reveal="" style="background:#E8F9FD;border:1px solid rgba(17,17,17,.08);border-radius:8px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;flex-wrap:wrap"><span>W.03 · CAMPUS · META ADS</span><span>9 FEB – 10 MAR 2026</span></div>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em">United Valley</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#444444;text-wrap:pretty">Full-funnel Meta campaign management — awareness, engagement, lead generation and remarketing run as one system.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:auto;font-variant-numeric:tabular-nums">
+          <div style="display:flex;justify-content:space-between;gap:12px;background:rgba(250,249,246,.75);border-radius:4px;padding:9px 14px;font-size:13px"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444">AWARENESS REACH</span><strong>825,768</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;background:rgba(250,249,246,.75);border-radius:4px;padding:9px 14px;font-size:13px;margin-left:10px"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444">POST ENGAGEMENTS</span><strong>6,732</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;background:rgba(250,249,246,.75);border-radius:4px;padding:9px 14px;font-size:13px;margin-left:20px"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444">PRIMARY LEADS</span><strong>114</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;background:rgba(250,249,246,.75);border-radius:4px;padding:9px 14px;font-size:13px;margin-left:30px"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444">REMARKETING LEADS</span><strong style="color:#1B8F5A">36</strong></div>
+        </div>
+        <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444">FUNNEL STAGES REPORTED SEPARATELY — NOT ONE CONVERSION METRIC</div>
+      </div>
+      <div data-reveal="" style="border:1px solid rgba(17,17,17,.12);border-radius:8px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px;transition:border-color .3s" data-hov="1">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;flex-wrap:wrap"><span>W.04 · REAL ESTATE · META ADS</span><span>16 FEB – 17 MAR 2026</span></div>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em">Shreevas Homes</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#444444;text-wrap:pretty">Five lead campaigns run in parallel; comparison and reallocation kept spend on the two strongest CPL bands.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;margin-top:auto;font-variant-numeric:tabular-nums">
+          <div style="display:grid;grid-template-columns:64px 1fr 72px;align-items:center;gap:12px;font-size:13px"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">137 LD</span><div style="height:6px;background:rgba(17,17,17,.08);border-radius:3px"><div style="width:34%;height:100%;background:#59CE8F;border-radius:3px"></div></div><strong style="text-align:right">₹60.82</strong></div>
+          <div style="display:grid;grid-template-columns:64px 1fr 72px;align-items:center;gap:12px;font-size:13px"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">64 LD</span><div style="height:6px;background:rgba(17,17,17,.08);border-radius:3px"><div style="width:39%;height:100%;background:#59CE8F;border-radius:3px"></div></div><strong style="text-align:right">₹70.93</strong></div>
+          <div style="display:grid;grid-template-columns:64px 1fr 72px;align-items:center;gap:12px;font-size:13px"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">18 LD</span><div style="height:6px;background:rgba(17,17,17,.08);border-radius:3px"><div style="width:38%;height:100%;background:#111111;border-radius:3px"></div></div><strong style="text-align:right">₹69.03</strong></div>
+          <div style="display:grid;grid-template-columns:64px 1fr 72px;align-items:center;gap:12px;font-size:13px"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">11 LD</span><div style="height:6px;background:rgba(17,17,17,.08);border-radius:3px"><div style="width:77%;height:100%;background:#111111;border-radius:3px"></div></div><strong style="text-align:right">₹140.09</strong></div>
+          <div style="display:grid;grid-template-columns:64px 1fr 72px;align-items:center;gap:12px;font-size:13px"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:#444444">2 LD</span><div style="height:6px;background:rgba(17,17,17,.08);border-radius:3px"><div style="width:100%;height:100%;background:#111111;border-radius:3px"></div></div><strong style="text-align:right">₹181.08</strong></div>
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444;margin-top:4px">BAR LENGTH = COST PER LEAD · <span style="color:#1B8F5A">GREEN = STRONGEST</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid rgba(17,17,17,.12);border-radius:8px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px;transition:border-color .3s" data-hov="1">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;flex-wrap:wrap"><span>W.05 · REAL ESTATE · META ADS</span><span>16 FEB – 17 MAR 2026</span></div>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em">Sreevas 3BHK</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#444444;text-wrap:pretty">Real-estate lead generation supported by campaign testing — the main campaign delivered 206 leads at ₹73.19 CPL.</p>
+        <div style="margin-top:auto;display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(17,17,17,.1);padding-top:18px">
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">206</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">LEADS · MAIN CAMPAIGN</div></div>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">₹3.12</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">OVERALL CPC (ACCOUNT)</div></div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid rgba(17,17,17,.12);border-radius:8px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px;transition:border-color .3s" data-hov="1">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;flex-wrap:wrap"><span>W.06 · FLIPKART · LISTING OPTIMISATION</span><span>24 APR – 23 MAY 2026</span></div>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em">Flipkart — Marketplace Jewellery Brand</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#444444;text-wrap:pretty">Marketplace listing optimisation for a jewellery catalogue — titles, keywords and imagery tuned so visibility came from search rather than paid placement.</p>
+        <div style="margin-top:auto;display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(17,17,17,.1);padding-top:18px">
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">11.1K</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">IMPRESSIONS</div></div>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">93%</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">FROM SEARCH RESULTS</div></div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid rgba(17,17,17,.12);border-radius:8px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px;transition:border-color .3s" data-hov="1">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:#444444;flex-wrap:wrap"><span>W.07 · AMAZON + FLIPKART · E-COMMERCE OPS</span><span>ONGOING</span></div>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(24px,2.8vw,34px);letter-spacing:-0.02em">Amazon &amp; Flipkart Catalogue Operations</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#444444;text-wrap:pretty">End-to-end catalogue work across two marketplaces — SKU structure, pricing, compliance checks and platform migration.</p>
+        <div style="margin-top:auto;display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(17,17,17,.1);padding-top:18px">
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">23</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">PRODUCTS MANAGED</div></div>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">2</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;margin-top:6px">MARKETPLACES</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin:clamp(56px,9vh,110px) 0 clamp(28px,4vh,44px)" data-reveal="">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">04.1</span>
+      <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.8vw,34px);line-height:1.1;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Proof of work</h3>
+      <div style="flex:1;height:1px;background:rgba(17,17,17,.12);align-self:center"></div>
+      <a href="proof-of-work.html" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#FF1E00;min-height:44px;display:flex;align-items:center">ALL 8 DASHBOARDS →</a>
+    </div>
+
+
+
+
+
+      <div id="lightbox" hidden tabindex="-1" role="dialog" aria-modal="true" aria-label="Screenshot" style="position:fixed;inset:0;z-index:120;background-color:rgba(17,17,17,.92);background-repeat:no-repeat;background-position:center;background-size:contain;cursor:zoom-out">
+        <span style="position:absolute;top:clamp(14px,3vw,28px);right:clamp(14px,3vw,28px);min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#FAF9F6">CLOSE ✕</span>
+      </div>
+
+
+  </section>
+
+  <section style="background:#E8F9FD;border-top:1px solid rgba(17,17,17,.08)">
+    <div style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vh,56px)" data-reveal="">
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">05</span>
+        <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Results archive</h2>
+        <div style="flex:1;height:1px;background:rgba(17,17,17,.15);align-self:center"></div>
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444">VERIFIED FROM PLATFORM DATA</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:rgba(17,17,17,.12);border:1px solid rgba(17,17,17,.12);border-radius:8px;overflow:hidden" data-reveal="">
+        <div style="background:#E8F9FD;padding:clamp(22px,2.6vw,34px)">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><span>MADHAV SUREEL</span><span>21–23 MAR 2026</span></div>
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(36px,4vw,52px);letter-spacing:-0.03em;font-variant-numeric:tabular-nums;margin-top:14px">66 <span style="font-size:.45em;font-weight:500;color:#444444">leads</span></div>
+          <div style="font-size:14px;color:#444444;margin-top:8px;font-variant-numeric:tabular-nums">₹20.86 CPL · ₹1,376.61 spend · 1.68% overall CTR — a 3-day sprint</div>
+        </div>
+        <div style="background:#E8F9FD;padding:clamp(22px,2.6vw,34px)">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><span>PELICAN HEIGHTS</span><span>1 MAR – 3 APR 2026</span></div>
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(36px,4vw,52px);letter-spacing:-0.03em;font-variant-numeric:tabular-nums;margin-top:14px">369 <span style="font-size:.45em;font-weight:500;color:#444444">leads</span></div>
+          <div style="font-size:14px;color:#444444;margin-top:8px;font-variant-numeric:tabular-nums">₹80.15 CPL · ₹29,574.49 spend · main campaign; later scaling reported separately</div>
+        </div>
+        <div style="background:#E8F9FD;padding:clamp(22px,2.6vw,34px)">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><span>SHYAM GREENS</span><span>16 FEB – 17 MAR 2026</span></div>
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(36px,4vw,52px);letter-spacing:-0.03em;font-variant-numeric:tabular-nums;margin-top:14px">95 <span style="font-size:.45em;font-weight:500;color:#444444">leads @ ₹91.54</span></div>
+          <div style="font-size:14px;color:#444444;margin-top:8px;font-variant-numeric:tabular-nums">Strongest of 5 campaigns — weak groups (up to ₹273.61 CPL) identified and separated</div>
+        </div>
+        <div style="background:#E8F9FD;padding:clamp(22px,2.6vw,34px)">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><span>SHYAM 242</span><span>15 FEB – 16 MAR 2026</span></div>
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(36px,4vw,52px);letter-spacing:-0.03em;font-variant-numeric:tabular-nums;margin-top:14px">4 <span style="font-size:.45em;font-weight:500;color:#444444">objectives, one account</span></div>
+          <div style="font-size:14px;color:#444444;margin-top:8px;font-variant-numeric:tabular-nums">261,327 awareness reach · 42 conversations @ ₹40.50 · 10 leads · 43,735 ThruPlays</div>
+        </div>
+      </div>
+      <div data-reveal="" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444;margin-top:18px">EACH RESULT SHOWN WITH ITS OWN REPORTING PERIOD — PERIODS ARE NEVER MERGED.</div>
+    </div>
+  </section>
+
+  <section style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vh,56px)" data-reveal="">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">06</span>
+      <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Services</h2>
+      <div style="flex:1;height:1px;background:rgba(17,17,17,.12);align-self:center"></div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div data-reveal="" data-svc-row="" style="display:grid;grid-template-columns:minmax(60px,90px) minmax(200px,320px) 1fr;gap:clamp(14px,3vw,48px);padding:clamp(26px,4vh,40px) 0;border-top:1px solid rgba(17,17,17,.12);align-items:baseline">
+        <span style="font-family:'Geist Mono',monospace;font-size:13px;color:#FF1E00">S.01</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(22px,3vw,36px);letter-spacing:-0.015em">Performance Marketing</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 24px;font-size:15px;line-height:1.7;color:#444444"><span>Meta Ads</span><span>Google Ads</span><span>Lead Generation</span><span>Campaign Optimisation</span><span>Remarketing</span><span>Conversion Tracking</span></div>
+      </div>
+      <div data-reveal="" data-svc-row="" style="display:grid;grid-template-columns:minmax(60px,90px) minmax(200px,320px) 1fr;gap:clamp(14px,3vw,48px);padding:clamp(26px,4vh,40px) 0;border-top:1px solid rgba(17,17,17,.12);align-items:baseline">
+        <span style="font-family:'Geist Mono',monospace;font-size:13px;color:#FF1E00">S.02</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(22px,3vw,36px);letter-spacing:-0.015em">E-commerce</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 24px;font-size:15px;line-height:1.7;color:#444444"><span>Product Listing</span><span>SEO Optimisation</span><span>Marketplace Management</span><span>AI Product Images</span><span>Catalogue Management</span><span>Amazon</span><span>Flipkart</span></div>
+      </div>
+      <div data-reveal="" data-svc-row="" style="display:grid;grid-template-columns:minmax(60px,90px) minmax(200px,320px) 1fr;gap:clamp(14px,3vw,48px);padding:clamp(26px,4vh,40px) 0;border-top:1px solid rgba(17,17,17,.12);border-bottom:1px solid rgba(17,17,17,.12);align-items:baseline">
+        <span style="font-family:'Geist Mono',monospace;font-size:13px;color:#FF1E00">S.03</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(22px,3vw,36px);letter-spacing:-0.015em">Creative &amp; Strategy</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 24px;font-size:15px;line-height:1.7;color:#444444"><span>Landing Pages</span><span>Marketing Strategy</span><span>Creative Direction</span><span>Funnel Planning</span><span>Campaign Analysis</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vh,56px)" data-reveal="">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">07</span>
+      <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Words from clients</h2>
+      <div style="flex:1;height:1px;background:rgba(17,17,17,.12);align-self:center"></div>
+      <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#444444"><span id="t-index">01</span> / 05</span>
+    </div>
+    <div data-reveal="" style="display:flex;gap:clamp(24px,4vw,64px);align-items:stretch;flex-wrap:wrap">
+      <div style="flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;gap:16px">
+        <button aria-label="Previous testimonial" data-act="tPrev" style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(17,17,17,.25);background:transparent;color:#111111;font-size:16px;cursor:pointer;transition:border-color .3s,color .3s" data-hov="2">↑</button>
+        <button aria-label="Next testimonial" data-act="tNext" style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(17,17,17,.25);background:transparent;color:#111111;font-size:16px;cursor:pointer;transition:border-color .3s,color .3s" data-hov="2">↓</button>
+        <div id="t-dots" style="display:flex;flex-direction:column;gap:8px;align-items:center;margin-top:8px" aria-hidden="true">
+
+        </div>
+      </div>
+      <div id="t-deck" style="flex:1 1 420px;min-width:min(280px,100%);position:relative;height:clamp(380px,55vh,520px);overflow:hidden;touch-action:pan-x;cursor:grab;user-select:none" aria-live="polite">
+
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid rgba(17,17,17,.1)">
+    <div style="max-width:1360px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,4.5vw,64px)">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vh,56px)" data-reveal="">
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF1E00">08</span>
+        <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,4.5vw,56px);line-height:1.08;letter-spacing:-0.02em;flex:0 1 auto;min-width:0">Certifications</h2>
+        <div style="flex:1;height:1px;background:rgba(17,17,17,.12);align-self:center"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:clamp(20px,2.5vw,32px)" data-reveal="">
+        <div style="border:1px solid rgba(17,17,17,.12);border-radius:8px;overflow:hidden">
+          <div style="aspect-ratio: 4/3; background: url(&quot;assets/img/cert-degree.jpg&quot;) center / cover no-repeat; display: flex; align-items: center; justify-content: center"></div>
+          <div style="padding:16px 18px"><div style="font-size:15px;font-weight:500">MBA International Marketing</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444;margin-top:6px">Collège de Paris · 10 Nov 2024 · ID 20239087</div></div>
+        </div>
+        <div style="border:1px solid rgba(17,17,17,.12);border-radius:8px;overflow:hidden">
+
+          <div style="aspect-ratio: 4/3; background: url(&quot;assets/img/cert-meta.jpg&quot;) center / cover no-repeat; display: flex; align-items: center; justify-content: center"></div><div style="padding:16px 18px"><div style="font-size:15px;font-weight:500">Meta Ads Expert</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444;margin-top:6px">ASDM · 10 Dec 2024 · ID 42789929</div></div>
+        </div>
+        <div style="border:1px solid rgba(17,17,17,.12);border-radius:8px;overflow:hidden">
+          <div style="aspect-ratio: 4/3; background: url(&quot;assets/img/cert-google.jpg&quot;) center / cover no-repeat; display: flex; align-items: center; justify-content: center"></div>
+          <div style="padding:16px 18px"><div style="font-size:15px;font-weight:500">Google Ads Expert</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444;margin-top:6px">ASDM · 2 Jan 2025 · ID 78655162</div></div>
+        </div>
+      </div>
+      <div data-reveal="" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#444444;margin-top:18px"><br></div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#111111;color:#FAF9F6">
+    <div style="max-width:1360px;margin:0 auto;padding:clamp(72px,13vh,160px) clamp(20px,4.5vw,64px)">
+      <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#FF6A52" data-reveal=""><span style="color:#FF1E00">09</span> — CONTACT</div>
+      <div style="margin-top:clamp(28px,5vh,52px);display:flex;flex-direction:column" data-reveal="">
+        <a href="mailto:sdevsolanki352@gmail.com" style="color:#FAF9F6;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(26px,5.4vw,72px);letter-spacing:-0.025em;line-height:1.15;padding:clamp(14px,2.4vh,24px) 0;border-bottom:1px solid rgba(250,249,246,.15);display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap" data-hov="0"><span>sdevsolanki352@gmail.com</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.5)">EMAIL</span></a>
+        <a href="tel:+918469837265" style="color:#FAF9F6;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(26px,5.4vw,72px);letter-spacing:-0.025em;line-height:1.15;padding:clamp(14px,2.4vh,24px) 0;border-bottom:1px solid rgba(250,249,246,.15);display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap" data-hov="0"><span style="font-variant-numeric:tabular-nums">+91 84698 37265</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.5)">PHONE</span></a>
+        <a href="https://www.linkedin.com/in/darshan-solanki-98a4a7301" target="_blank" rel="noopener" style="color:#FAF9F6;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(26px,5.4vw,72px);letter-spacing:-0.025em;line-height:1.15;padding:clamp(14px,2.4vh,24px) 0;border-bottom:1px solid rgba(250,249,246,.15);display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap" data-hov="0"><span>linkedin.com/in/darshansolanki</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.5)">LINKEDIN</span></a>
+
+      </div>
+      <div data-reveal="" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(250,249,246,.5);margin-top:28px">AHMEDABAD, INDIA ·</div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="background:#111111;color:rgba(250,249,246,.6);border-top:1px solid rgba(250,249,246,.12)">
+    <div style="max-width:1360px;margin:0 auto;padding:22px clamp(20px,4.5vw,64px);display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em">
+      <span style="color:#FAF9F6">DARSHAN SOLANKI — PERFORMANCE MARKETING SPECIALIST</span>
+      <span>© 2026 · ALL METRICS VERIFIED FROM PLATFORM REPORTS</span>
+      <a href="#top" style="color:rgba(250,249,246,.6)" data-hov="0">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/lightbox.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
 </html>

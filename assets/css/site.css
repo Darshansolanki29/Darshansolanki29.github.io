@@ -1,0 +1,44 @@
+/* Darshan Solanki - portfolio. Base rules carried over from the design source. */
+html{scroll-behavior:smooth}
+body{margin:0;background:#FAF9F6;color:#111111;font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#111111;text-decoration:none}
+a:hover{color:#FF1E00}
+::selection{background:#FF1E00;color:#FAF9F6}
+@keyframes dsRise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes dsMask{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0% 0)}}
+@keyframes dsLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes dsMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes dsLoadBar{from{width:0%}to{width:100%}}
+@keyframes dsScrollDot{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(14px);opacity:.2}}
+@keyframes dsFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pwRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes pwMask{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0% 0)}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation-duration:.01ms !important;animation-iteration-count:1 !important}}
+@media (max-width: 767px){[data-ds-desknav]{display:none !important}[data-ds-burger]{display:flex !important}[data-ds-sticky-rail]{position:static !important}}
+@media (min-width: 768px){[data-ds-mobilemenu]{display:none !important}}
+[hidden]{display:none !important}
+#burger{-webkit-tap-highlight-color:transparent}
+#burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+#burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+body.ds-scroll-lock{overflow:hidden}
+#lightbox{outline:none}
+/* hover states lifted out of the design style-hover attributes */
+[data-hov="0"]:hover{color:#FF1E00}
+[data-hov="1"]:hover{border-color:#FF1E00}
+[data-hov="2"]:hover{border-color:#FF1E00;color:#FF1E00}
+[data-hov="3"]:hover{border-color:#FF1E00;transform:translateY(-5px)}
+:focus-visible{outline:2px solid #FF1E00;outline-offset:3px}
+
+/* Proof-of-work evidence panels sit two tracks wide beside their copy. Below
+   768px the grid is a single column, and spanning two would invent a second. */
+[data-span-2]{grid-column:span 2}
+
+/* Phone layout: the experience and services rows are multi-column by design and
+   have no room for it below 768px, and the contact links are long unbreakable
+   strings. */
+@media (max-width: 767px){
+  [data-exp-row],[data-svc-row]{grid-template-columns:1fr !important;gap:10px !important}
+  #contact a span{overflow-wrap:anywhere}
+  [data-span-2]{grid-column:auto}
+}
